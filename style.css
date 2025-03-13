@@ -14,7 +14,7 @@ html{
 /* custom scroll bar */
 
 .typing {
-    color: red; /* Ou outra cor visível no seu fundo */
+    color: rgb(2, 0, 0); /* Ou outra cor visível no seu fundo */
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +24,7 @@ html{
     background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #e4e4e4;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -77,7 +77,7 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: red;
+    color: rgb(7, 0, 0);
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -109,7 +109,7 @@ section .title::after{
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: red;
+    color: #dd0d5d;
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -128,7 +128,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: red;
+    color: #ff0000;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -171,54 +171,68 @@ section .title::after{
 
 
 /* home section styling */
-.home{
+/* Estilo da seção inicial */
+.home {
     display: flex;
-    background: url("") no-repeat center;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
-    color: #f52020;
-    min-height: 500px;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+    background: #f1f1f1; /* Cor de fundo escura */
+    color: #660202;
+    text-align: center;
 }
-.home .max-width{
-  width: 100%;
-  display: flex;
+
+.home-content {
+    max-width: 600px;
 }
-.home .max-width .row{
-  margin-right: 0;
-}
-.home .home-content .text-1{
+
+.home .text-1 {
     font-size: 27px;
+    margin-bottom: 10px;
+    color: #790505;
 }
-.home .home-content .text-2{
+
+.home .text-2 {
     font-size: 75px;
     font-weight: 600;
-    margin-left: -3px;
+    margin-bottom: 10px;
+    color: #3d0303;
 }
-.home .home-content .text-3{
+
+.home .text-3 {
     font-size: 40px;
-    margin: 5px 0;
+    margin-bottom: 20px;
+    color: #020202;
 }
-.home .home-content .text-3 span{
-    color: red;
+
+.home .text-3 span {
+    color: red; /* Cor do texto dinâmico */
     font-weight: 500;
 }
-.home .home-content a{
+
+
+
+/* Estilo do botão do WhatsApp */
+.whatsapp-btn {
     display: inline-block;
-    background: red;
+    background: #0a6b2d; /* Cor do WhatsApp */
     color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 2px solid red;
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
-.home .home-content a:hover{
-    color: red;
-    background: none;
+
+.whatsapp-btn:hover {
+    background: #128C7E; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn i {
+    margin-left: 10px;
 }
 
 /* about section styling */
@@ -250,14 +264,14 @@ section .title::after{
 }
 .about .about-content .right a{
     display: inline-block;
-    background: red;
+    background: #790330;
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid red;
+    border: 2px solid #790330;
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
@@ -272,16 +286,16 @@ section .title::after{
 }
 .services .title::before,
 .projects .title::before{
-    background: #fff;
+    background: #ffffff;
 }
 .services .title::after,
 .projects .title::after{
-    background: #111;
+    background: #ffffff;
     content: "O que eu forneço";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
-    background: #222;
+    background: #790330;
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -329,18 +343,18 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: red;
+    background: #790330;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid red;
+    border: 2px solid #790330;
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: red;
+    color: #790330;
     background: none;
 }
 .skills .skills-content .right .bars{
@@ -520,60 +534,99 @@ section .title::after{
     background: red !important;
 }
 
-/* contact section styling */
-.contact .title::after{
+//* contact section styling */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0; /* Adiciona um espaçamento vertical */
+}
+
+.contact .title::after {
     content: "Entre em contato";
 }
-.contact .contact-content .column{
-    width: calc(50% - 30px);
+
+.contact .max-width {
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona um padding lateral */
 }
-.contact .contact-content .text{
+
+.contact .contact-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact .contact-content .column {
+    width: calc(50% - 30px);
+    text-align: center; /* Centraliza o conteúdo das colunas */
+}
+
+.contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.contact .contact-content .left p{
-    text-align: justify;
+
+.contact .contact-content .left p {
+    text-align: center; /* Centraliza o texto */
 }
-.contact .contact-content .left .icons{
+
+.contact .contact-content .left .icons {
     margin: 10px 0;
 }
-.contact .contact-content .row{
+
+.contact .contact-content .row {
     display: flex;
     height: 65px;
     align-items: center;
+    justify-content: center; /* Centraliza os ícones e textos */
 }
-.contact .contact-content .row .info{
+
+.contact .contact-content .row .info {
     margin-left: 30px;
 }
-.contact .contact-content .row i{
+
+.contact .contact-content .row i {
     font-size: 25px;
     color: red;
 }
-.contact .contact-content .info .head{
+
+.contact .contact-content .info .head {
     font-weight: 500;
 }
-.contact .contact-content .info .sub-title{
+
+.contact .contact-content .info .sub-title {
     color: #333;
 }
-.contact .right form .fields{
+
+.contact .right form .fields {
     display: flex;
+    flex-direction: column; /* Alinha os campos do formulário verticalmente */
+    align-items: center; /* Centraliza os campos do formulário */
 }
+
 .contact .right form .field,
-.contact .right form .fields .field{
+.contact .right form .fields .field {
     height: 45px;
-    width: 100%;
+    width: 80%; /* Reduz a largura dos campos */
     margin-bottom: 15px;
 }
-.contact .right form .textarea{
+
+.contact .right form .textarea {
     height: 80px;
-    width: 100%;
+    width: 80%; /* Reduz a largura da área de texto */
 }
-.contact .right form .name{
-    margin-right: 10px;
+
+.contact .right form .name {
+    margin-right: 0; /* Remove a margem direita */
 }
+
 .contact .right form .field input,
-.contact .right form .textarea textarea{
+.contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -584,17 +637,21 @@ section .title::after{
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
+
 .contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
+.contact .right form .textarea textarea:focus {
     border-color: #b3b3b3;
 }
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
+
+.contact .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
 }
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
+
+.contact .right form .button-area {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    align-items: center;
 }
 .right form .button-area button{
   color: #fff;
@@ -756,5 +813,6 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+    
 }
 
